@@ -302,7 +302,7 @@ function createPopup(title, description, price, position) {
 
     const image = document.createElement('img')
     image.className = 'img-preview';
-    image.src = '/biscuits.jpg'
+    image.src = 'biscuits.jpg'
     div.appendChild(image);
 
     const desc = document.createElement('div');
