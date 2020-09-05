@@ -1,84 +1,150 @@
 body {
-	margin: 0;
-	background-color: #000;
-	color: #fff;
-	font-family: Monospace;
-	font-size: 13px;
-	line-height: 24px;
-	overscroll-behavior: none;
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: Monospace;
+    font-size: 13px;
+    line-height: 24px;
+    overscroll-behavior: none;
+    overflow: hidden;
 }
 
 a {
-	color: #ff0;
-	text-decoration: none;
+    color: #ff0;
+    text-decoration: none;
 }
 
 a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 button {
-	cursor: pointer;
-	text-transform: uppercase;
+    cursor: pointer;
+    text-transform: uppercase;
 }
 
 canvas {
-	display: block;
+    display: block;
 }
 
 #info {
-	position: absolute;
-	top: 0px;
-	width: 100%;
-	padding: 10px;
-	box-sizing: border-box;
-	text-align: center;
-	-moz-user-select: none;
-	-webkit-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	pointer-events: none;
-	z-index: 1; /* TODO Solve this in HTML */
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    z-index: 1;
+    /* TODO Solve this in HTML */
 }
 
-a, button, input, select {
-	pointer-events: auto;
+a,
+button,
+input,
+select {
+    pointer-events: auto;
 }
 
 .dg.ac {
-	-moz-user-select: none;
-	-webkit-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	z-index: 2 !important; /* TODO Solve this in HTML */
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 2 !important;
+    /* TODO Solve this in HTML */
 }
 
 #overlay {
-	position: absolute;
-	z-index: 2;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: rgba(0,0,0,0.7);
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
 }
 
-	#overlay button {
-		background: #ffffff;
-		border: 0;
-		color: #000000;
-		padding: 16px 20px;
-		text-transform: uppercase;
-		cursor: pointer;
-	}
+#overlay button {
+    background: #ffffff;
+    border: 0;
+    color: #000000;
+    padding: 16px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
 
 #notSupported {
-	width: 50%;
-	margin: auto;
-	background-color: #f00;
-	margin-top: 20px;
-	padding: 10px;
+    width: 50%;
+    margin: auto;
+    background-color: #f00;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.popup {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9;
+    padding: 1rem;
+    min-width: 16rem;
+    max-width: 16rem;
+    font-family: Avenir Next, Avenir, Arial, Helvetica, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+	margin-top: 1.2rem;
+	position: relative;
+}
+
+.header-title {
+    line-height: 0;
+    margin-right: 1rem;
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+.close-button {
+    width: 2rem;
+    height: 2rem;
+	padding: 0;
+	font-size: 1.2rem;
+    text-align: center;
+    border-radius: 0;
+    border: 1px solid white;
+    background: black;
+    color: white;
+    position: absolute;
+    right: -1rem;
+    top: -2.2rem;
+    border: none;
+}
+
+.close-button:hover {
+    background-color: white;
+    color: black;
+}
+
+.price-tag {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    text-align: right;
+}
+
+.img-preview {
+    width: 100%;
+    object-fit: cover;
+    padding-bottom: 0.4rem;
 }
